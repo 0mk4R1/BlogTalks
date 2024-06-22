@@ -1,0 +1,263 @@
+/* General Styles */
+body {
+    font-family: "Handlee", cursive;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #f9f9f9, #e0e0e0);
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.site-name {
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #6200ea;
+}
+
+i {
+    padding-right: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.new-blog-button {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: "Handlee", cursive;
+    font-style: normal;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.new-blog-button:hover {
+    background-color: #3700b3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Section */
+main {
+    flex: 1;
+    padding: 100px 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-list:hover {
+    transform: translateY(-5px);
+}
+
+.blog-post {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    width: 100%;
+}
+
+.blog-post h1 {
+    font-size: 2em;
+    color: #6200ea;
+}
+
+.blog-post p {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.blog-post form {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.blog-post button {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Handlee", cursive;
+    font-style: normal;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 5px;
+}
+
+.blog-post button:hover {
+    background-color: #3700b3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.no-blogs-message {
+    font-size: 1.2em;
+    color: #757575;
+    margin-top: 50px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #ffffff;
+    color: #757575;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #e0e0e0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footerContent {
+    font-size: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .site-name {
+        font-size: 1.6em;
+    }
+
+    .new-blog-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .blog-list {
+        padding: 30px;
+    }
+
+    .form-section {
+        padding: 30px;
+    }
+
+    .submit-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+/* Form Sections */
+.form-section {
+    max-width: 800px;
+    margin: 120px auto 20px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #6200ea;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: 500;
+    font-family: "Handlee", cursive;
+    font-style: normal;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    font-family: "Handlee", cursive;
+    font-style: normal;
+}
+
+textarea {
+    min-height: 200px;
+}
+
+.submit-button {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-family: "Handlee", cursive;
+    font-style: normal;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #3700b3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs") %>
+
+<section class="form-section">
+    <h2>Write a New Blog</h2>
+    <form action="/blogForm" method="post">
+        <div class="form-group">
+            <label for="blog-title">Title</label>
+            <input type="text" id="blog-title" name="title" required>
+        </div>
+        <div class="form-group">
+            <label for="blog-content">Write your thoughts...</label>
+            <textarea id="blog-content" name="content" rows="8" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Publish Blog</button>
+        <button class="submit-button"><a href="/">Cancel</a></button>
+    </form>
+</section>
+
+<%- include("partials/footer.ejs") %>
